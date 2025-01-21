@@ -1,14 +1,8 @@
 name: Build HMCLauncher
 
 on:
-  push:
-    paths:
-      - 'HMCLauncher/**'
-      - '.github/workflows/build-launcher.yml'
-  pull_request:
-    paths:
-      - 'HMCLauncher/**'
-      - '.github/workflows/build-launcher.yml'
+  repository_dispatch:
+  workflow_dispatch:
 
 jobs:
   build:
